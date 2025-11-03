@@ -1,7 +1,7 @@
 # Import necessary modules
-from flask import Blueprint, request, jsonify
-from werkzeug.security import generate_password_hash, check_password_hash  # fixed spelling
-from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity  # fixed names
+from flask import Blueprint, request, jsonify # type: ignore
+from werkzeug.security import generate_password_hash, check_password_hash  # type: ignore # fixed spelling
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity  # type: ignore # fixed names
 from models import db, User  # import database and User model
 
 # Create a blueprint for authentication routes
