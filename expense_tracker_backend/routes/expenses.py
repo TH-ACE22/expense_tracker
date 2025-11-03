@@ -12,7 +12,7 @@ expense_bp = Blueprint("expenses", __name__, url_prefix="/expenses")
 # GET /expenses/
 #================================
 
-@expenses_bp.route("/", methods=["GET"]) # type: ignore
+@expense_bp.route("/", methods=["GET"]) 
 
 @jwt_required() # Required a valid JWT Token to access this route
 
@@ -38,7 +38,7 @@ def get_expenses():
 # ==================================
 # POST /expense/
 # ================================
-@expenses_bp.route("/", methods=["POST"]) # type: ignore
+@expense_bp.route("/", methods=["POST"]) 
 @jwt_required()
 def add_expense():
     # Get user ID from  the JWT
