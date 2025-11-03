@@ -30,3 +30,19 @@ def add_expense():
         user_id=user_id
     )
     db.session.add(expense)
+    db.session.commit()
+    return jsonify({"message" : "Expense added"}), 201
+
+
+@expense_bp.route("/<int:id>",methods= ["DELETE"])
+@jwt_required()
+def delete_expense(id):
+    user_id = get_jwt_identity()
+    expense = Expense.query.filter_by(id=id, user_id=user_id).first()
+    if not expense:
+        return jsonify({"message":"Expense not found"}), 404
+    
+    db.seession.delete(expense)
+    db.session.commit()
+    return jsonify({"message": "Expense deleted"})
+    
