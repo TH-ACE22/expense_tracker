@@ -1,8 +1,8 @@
-from flask import Flask # type: ignore
+from flask import Flask 
 from flask_cors import CORS  # type: ignore # Enables cross-origin requests (used with frontend apps)
 from flask_jwt_extended import JWTManager  # type: ignore # For handling JWT-based authentication
 from models import db # Import the SQLAlchemy db instance (fixed typo from __int__)
-from config import config  # Import app configuration (e.g., database URI, secret key)
+from config import Config  # Import app configuration (e.g., database URI, secret key)
 from routes.auth import auth_bp  # Import the authentication routes blueprint
 from routes.expenses import expense_bp  # Import the expenses routes blueprint (fixed variable name)
 
@@ -10,6 +10,9 @@ from routes.expenses import expense_bp  # Import the expenses routes blueprint (
 # APP FACTORY FUNCTION
 # ===========================
 def create_app():
+
+
+ 
     """
     Application factory that creates and configures the Flask app.
     This pattern allows flexibility for testing, scaling, and cleaner code organization.
@@ -17,11 +20,11 @@ def create_app():
     app = Flask(__name__)
 
     # Load configuration settings (from config.py)
-    app.config.from_object(config)
+    app.config.from_object(Config)
 
     # Enable Cross-Origin Resource Sharing for the frontend (React, etc.)
     # This allows frontend requests (e.g., http://localhost:5173) to reach your Flask API
-    CORS(app, origins=config.FRONTEND_URL, supports_credentials=True)
+    CORS(app, origins=Config.FRONTEND_URL, supports_credentials=True)
 
     # Initialize database with Flask app
     db.init_app(app)
