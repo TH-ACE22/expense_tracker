@@ -1,5 +1,5 @@
-import '../styles/components/_hero.css'
-import heroImg from '../assets/hero-graph.jpg'
+import '../styles/components/_hero.css';
+import heroImg from '../assets/hero-graph.jpg';
 
 
 
@@ -14,8 +14,8 @@ function HeroSection(){
     </div>
   </section>
 
-    )
+    );
 }
 
 
-export default HeroSection
+export default HeroSection;

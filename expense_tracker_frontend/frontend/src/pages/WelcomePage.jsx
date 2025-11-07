@@ -1,14 +1,11 @@
-import HeroSection from '../Components/HeroSection'
+import HeroSection from './components/HeroSection';
 
-
-function WelcomePage (){
-
-    return (
-        <div className = 'welcome-page'>
-            <HeroSection/>
-        </div>
-    )
+function WelcomePage() {
+  return (
+    <div className="welcome-page">
+      <HeroSection />
+    </div>
+  );
 }
 
-
-export default WelcomePage
+export default WelcomePage;

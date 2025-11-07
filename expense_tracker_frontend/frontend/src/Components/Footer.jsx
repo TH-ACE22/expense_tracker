@@ -1,4 +1,4 @@
-import '../styles/components/_footer.css'
+import '../styles/components/_footer.css';
 
 
 
@@ -12,8 +12,8 @@ function Footer(){
            </div>
 
         </footer>
-    )
+    );
 }
 
 
-export default Footer
+export default Footer;
