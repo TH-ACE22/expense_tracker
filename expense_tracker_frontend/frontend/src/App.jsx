@@ -1,4 +1,4 @@
-import { AppRoutes } from './routes/AppRoutes'
+import AppRoutes  from './routes/AppRoutes';
 
 function App(){
 
@@ -8,3 +8,5 @@ function App(){
      </div>
   );
 }
+
+export default App;
