@@ -1,4 +1,4 @@
-import HeroSection from './components/HeroSection';
+import HeroSection from '../Components/HeroSection';
 
 function WelcomePage() {
   return (
