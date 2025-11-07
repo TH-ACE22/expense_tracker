@@ -1,5 +1,5 @@
 import '../styles/components/_hero.css'
-import heroImg from '../assets/hero-graph.png'
+import heroImg from '../assets/hero-graph.jpg'
 
 
 
@@ -10,7 +10,7 @@ function HeroSection(){
     <div className='container text-center'> 
       <h1 className='display-4 fw-bold'> Track. Save. Grow.</h1>
       <p className='lead'> Simplify your finances with smart budgeting and insights.</p>
-      <img src= {herorImg} alt = 'Her'  className ='img-fluid hero-img mt-4'/>
+      <img src= {heroImg} alt = 'Hero'  className ='img-fluid hero-img mt-4'/>
     </div>
   </section>
 
