@@ -1,10 +1,19 @@
+.navbar{
+    transition: box -shadow 0.3s ease-in-out;
+
+}
 .navbar-brand {
      
-    font-weight: 700;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
-.navbar .btn-dark{
-    border-radius: 10px;
+.btn{
+    font-weight: 500;
+}
+
+.navbar .btn-outline-success:hover{
+
+    background-color: #198754;
+    color: #fff;
 
 }

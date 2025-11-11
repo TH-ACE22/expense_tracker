@@ -17,13 +17,22 @@ function Navbar(){
             className = 'me-2'/>
             ExpenseTracker
             </Link>
+
+            {/* Toggler (mobile view)*/}
             <button 
             className = 'navbar-toggler' 
              type = 'button'
-             data-bs-t>
+             data-bs-toggle= 'collapse'
+             data-bs-target= '#navMenu'
+             aria-controls= 'navMenu'
+             aria-expanded = 'false'
+             aria-label = 'Toggle navigation'
+             >
+
                 <span className = 'navbar-toggler-icon'></span>
             </button>
 
+            {/*Nav Links*/}
             <div className = 'collapse navbar-collapse' id= 'navMenu'>
               <div className ='ms-auto d-flex align-items-center'>
                 <Link to = '/login' className = 'btn btn-outline-success me-2 rounded-pill px-4'>
