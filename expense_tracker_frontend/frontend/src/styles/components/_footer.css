@@ -1,13 +1,14 @@
-footer a{
-    background-color: var(--light-color);
-
+.footer{
+    background-color: #ffffff;
+    color: #6c757d;
+    border-top:1px solid #eaeaea;
 }
 
 footer a {
-    color: var(--secondary-color);
-    transition: color 0.3s ease;
+  
+    transition: color 0.2s ease-in-out;
 }
 
 footer a:hover{
-    color: var(--primary-color);
+    color: #198754;
 }
